@@ -1,3 +1,3 @@
 # pipeline-mysql-postgres
 
-Constructing a data pipeline btween mysql to postgres
+Constructing a data pipeline between mysql to postgres
