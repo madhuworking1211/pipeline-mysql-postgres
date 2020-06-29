@@ -6,11 +6,12 @@ from write import load_table,build_insert_query
 
 def main():
     env = sys.argv[1]
+    a_tables = sys.argv[2]
     db_details = load_db_details(env)
-    tables = get_tables('table_list')
+    tables = get_tables('table_list',a_tables)
     for table in tables['table_name']:
         data, column_names = read_table(db_details, table)
-        test = build_insert_query(table, column_names)
+        #test = build_insert_query(table, column_names)
         load_table(db_details,data,column_names,table)
         print(f'Successfully completed process for {table}')
 
